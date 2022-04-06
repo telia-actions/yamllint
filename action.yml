@@ -1,0 +1,14 @@
+name: Ansible Lint
+description: Run Ansible Lint
+inputs:
+  path:
+    required: false
+    default: "."
+runs:
+  using: docker
+  image: 'Dockerfile'
+  entrypoint: yamllint 
+  env:
+    YAMLLINT_CONFIG_FILE: /config/.yamllint
+  args:
+    - ${{ inputs.path }}
