@@ -28,3 +28,4 @@ rules:
     type: unix
   new-line-at-end-of-file: disable
   truthy: disable
+  trailing-spaces: disable
