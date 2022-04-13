@@ -8,7 +8,7 @@ on:
 
 jobs:
   release-on-push:
-    runs-on: [small, telia-managed, Linux, X64]
+    runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
