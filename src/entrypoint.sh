@@ -2,9 +2,9 @@
 
 function parse_inputs {
     
-    path=""
+    yamllint_file_or_dir=""
     if [ "${INPUT_YAMLLINT_FILE_OR_DIR}" != "" ] || [ "${INPUT_YAMLLINT_FILE_OR_DIR}" != "." ]; then
-        path="${INPUT_YAMLLINT_FILE_OR_DIR}"
+        yamllint_file_or_dir="${INPUT_YAMLLINT_FILE_OR_DIR}"
     fi
 
     yamllint_strict=''
@@ -22,7 +22,7 @@ function parse_inputs {
         yamllint_config_datapath="--config-data ${INPUT_YAMLLINT_CONFIG_DATAPATH}"
     fi
 
-    yamllint_format='github'
+    yamllint_format='--format github'
 
     yamllint_comment=0
     if [[ "${INPUT_YAMLLINT_COMMENT}" == "0" || "${INPUT_YAMLLINT_COMMENT}" == "false" ]]; then
