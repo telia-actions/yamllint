@@ -1,2 +1,2 @@
 #!/bin/bash
-yamllint -f github ${1} 1>&2
+yamllint -f parsable ${1} 1>&2
