@@ -10,5 +10,6 @@ runs:
   entrypoint: yamllint
   env:
     YAMLLINT_CONFIG_FILE: /config/.yamllint
+    YAML_YAMLLINT_ARGUMENTS: -f github
   args:
     - ${{ inputs.path }}
