@@ -4,6 +4,7 @@ function yaml_lint {
 
     # gather output
     echo "lint: info: yamllint on ${path}."
+    echo "yamllint ${yamllint_strict} ${yamllint_config_filepath} ${yamllint_config_datapath} ${yamllint_format} ${path}"
     lint_output=$(yamllint ${yamllint_strict} ${yamllint_config_filepath} ${yamllint_config_datapath} ${yamllint_format} ${path})
     lint_exit_code=${?}
 
