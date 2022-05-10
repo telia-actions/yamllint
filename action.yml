@@ -5,7 +5,7 @@ branding:
   icon: 'sliders'
   color: 'green'
 inputs:
-  path:
+  yamllint_file_or_dir:
     description: 'File or Directory to do yamllint on'
     required: false
     default: '.'
