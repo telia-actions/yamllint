@@ -11,5 +11,5 @@ runs:
   env:
     YAMLLINT_CONFIG_FILE: /config/.yamllint
   args:
-    - -f github
+    - --format github
     - ${{ inputs.path }}
