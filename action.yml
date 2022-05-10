@@ -7,7 +7,7 @@ inputs:
 runs:
   using: docker
   image: 'Dockerfile'
-  entrypoint: yamllint 
+  entrypoint: yamllint -f github 
   env:
     YAMLLINT_CONFIG_FILE: /config/.yamllint
   args:
