@@ -7,9 +7,9 @@ inputs:
 runs:
   using: docker
   image: 'Dockerfile'
-  entrypoint: yamllint
   env:
+    GITHUB_ACTIONS: "true"
+    GITHUB_WORKFLOW: "{{ github.workflow.name }}"
     YAMLLINT_CONFIG_FILE: /config/.yamllint
   args:
-    - --format github
     - ${{ inputs.path }}

@@ -5,4 +5,6 @@ RUN pip install -r requirements.txt
 RUN mkdir -p /config
 COPY .yamllint /config
 RUN chmod -R 777 /config
-ENTRYPOINT [ "python" ]
+COPY ["src", "/src/"]
+RUN chmod -R 777 /src
+ENTRYPOINT ["/src/entrypoint.sh"]
