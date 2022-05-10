@@ -7,4 +7,5 @@ COPY .yamllint /config
 RUN chmod -R 777 /config
 COPY ["src", "/src/"]
 RUN chmod -R 777 /src
+COPY .yamllint /src
 ENTRYPOINT ["/src/entrypoint.sh"]
